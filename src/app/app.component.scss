@@ -1,0 +1,27 @@
+.container {
+  height: 70vh;
+  width: 70vw;
+}
+#viewApexChart {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+
+  .apex-chart-el {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+  }
+}
