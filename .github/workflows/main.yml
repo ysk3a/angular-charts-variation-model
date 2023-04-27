@@ -1,0 +1,48 @@
+- name: Update license copyright year(s)
+  # You may pin to the exact commit or the version.
+  # uses: FantasticFiasco/action-update-license-year@00b7495233bb4a9229204b2bd3e2a6df7551e155
+  uses: FantasticFiasco/action-update-license-year@v3.0.0
+  with:
+    # Personal access token (PAT) used when interacting with Git and GitHub.
+
+We recommend using a service account with the least permissions necessary. Also when generating a new PAT, select the least scopes necessary.
+
+[Learn more about creating and using encrypted secrets](https://help.github.com/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)
+
+    token: 
+    # A path or wildcard pattern specifying files to transform. Multiple paths can be specified using literal styled YAML.
+
+    path: # optional, default is LICENSE
+    # A regular expression (JavaScript flavor) describing the license transform. The expression must have the following properties:
+
+- A capturing group named "from", encapsulating the first year of license validity
+- Written to support the RegExp flags "gmi" ("global", "multiline" and "ignore case")
+
+The expression will be used by String.prototype.replace() to apply the transformation.
+
+    transform: # optional
+    # The branch name. Supports substituting variable {{currentYear}}.
+    branchName: # optional, default is license/copyright-to-{{currentYear}}
+    # The git commit title. Supports substituting variable {{currentYear}}.
+    commitTitle: # optional, default is docs(license): update copyright year(s)
+    # The git commit body that will be appended to commit title, separated by two line returns. Supports substituting variable {{currentYear}}.
+
+    commitBody: # optional, default is 
+    # The git author name, used when committing changes to the repository.
+    commitAuthorName: # optional, default is github-actions
+    # The git author e-mail, used when committing changes to the repository.
+    commitAuthorEmail: # optional, default is github-actions@github.com
+    # The GPG private key, used in combination with gpgPassphrase when signing commits. Private keys protected by a passphrase are supported while private keys without a passphrase are unsupported.
+
+    gpgPrivateKey: # optional, default is 
+    # The GPG passphrase, used in combination with gpgPrivateKey when signing commits.
+    gpgPassphrase: # optional, default is 
+    # The title of the new pull request. Supports substituting variable {{currentYear}}.
+    prTitle: # optional, default is Update license copyright year(s)
+    # The contents of the pull request. Supports substituting variable {{currentYear}}.
+    prBody: # optional, default is 
+    # Comma-separated list with usernames of people to assign when pull request is created.
+
+    assignees: # optional, default is 
+    # Comma-separated list of labels to add when pull request is created.
+    labels: # optional, default is 
