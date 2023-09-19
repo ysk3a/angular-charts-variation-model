@@ -15,7 +15,7 @@
     "ng-apexcharts": "^1.7.5",
     "rxjs": "^7.8.0",
     "tslib": "^2.5.0",
-    "zone.js": "^0.12.0"
+    "zone.js": "^0.14.0"
   },
   "scripts": {
     "ng": "ng",
@@ -28,7 +28,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1100.4",
     "@angular/cli": "~11.0.4",
-    "@angular/compiler-cli": "~11.0.4",
+    "@angular/compiler-cli": "~11.2.0",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
